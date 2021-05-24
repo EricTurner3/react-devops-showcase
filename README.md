@@ -9,3 +9,4 @@ This repo is a test / learning experience / showcase for a React app while also 
 * Practice building a new `laravel` php app with a `react` front-end using `composer`
 * Practice doing `unit testing`
 
+You can find more detailed information of how I built this app and my learning process on my  [blog here](https://blog.ericturner.it/category/projects/react-devops-showcase/).

@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GroceryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('groceries', [GroceryController::class, 'index']);
+Route::post('groceries', [GroceryController::class, 'store']);
+Route::get('groceries/{id}', [GroceryController::class, 'show']);
+Route::put('groceries/{grocery}', [GroceryController::class, 'markAsCompleted']);

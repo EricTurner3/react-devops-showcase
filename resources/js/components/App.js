@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Layout from './Layout/Layout'
 import Home from './pages/Home'
-import Test from './pages/Test'
+import Groceries from './pages/Groceries'
 
 class App extends Component {
     render () {
@@ -12,7 +12,7 @@ class App extends Component {
                 <Layout>
                     <Switch>
                         <Route exact path='/' component={Home} />
-                        <Route exact path='/test' component={Test} />
+                        <Route exact path='/groceries' component={Groceries} />
                     </Switch>
                 </Layout>
             </BrowserRouter>
