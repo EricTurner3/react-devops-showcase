@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import List from '../List'
 
 class Groceries extends Component {
       constructor () {
@@ -27,15 +28,7 @@ class Groceries extends Component {
                         <div className="card-header">Grocery List</div>
                         <div className="card-body">
                         <ul className='list-group list-group-flush'>
-                            {groceries.map(grocery_item => (
-                                <Link
-                                className='list-group-item list-group-item-action d-flex justify-content-between align-items-center'
-                                to={`/${grocery_item.id}`}
-                                key={grocery_item.id}
-                                >
-                                {grocery_item.item}
-                                </Link>
-                            ))}
+                            <List items={groceries} />
                         </ul>
                         </div>
                     </div>
