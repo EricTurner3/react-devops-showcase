@@ -15,6 +15,7 @@ class GroceriesTest extends TestCase
      */
      public function test_get_groceries()
      {
+         $this->withoutExceptionHandling(); // more debugging
          $response = $this->getJson('/api/groceries');
  
          $response->assertStatus(200) // ensure we get a 200 - Success Status code
